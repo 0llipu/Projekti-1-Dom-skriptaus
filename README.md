@@ -6,7 +6,7 @@ Käytin tähän viimeisen 3 viikon aikana vähintään 40 tuntia tehokasta työt
 Javascriptin osalta sitten olikin se kakku joka kesti pisimpään. Katsoin ensin useamman tutorialin ja vein workshoppeja pidemmälle tahallaan kun halusin tutkia asioita.
 Tämän lisäksi on pakko nostaa ylös, että AP:n kanssa käydyt lyhyet keskustelut avasivat useampaa asiaa enemmän kuin mitä monet tutorialit tekivät. Mm. nodelistin käyttäminen ja suodattimen kytkeminen ja sen rakentaminen.
 
-Tässä linkki videoon: https://video.laurea.fi/media/Dom+Skriptaus+Projekti+1+Video%2C+kurssi+A+TO00BL10-3018/0_htn87uea
+Linkki videoon on tehtäväpalautuksessa.
 
 Tässä linkki verkkosivustolle: https://o-p.netlify.app/
 
