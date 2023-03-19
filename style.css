@@ -314,7 +314,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--primary);
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
