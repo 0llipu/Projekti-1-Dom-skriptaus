@@ -248,6 +248,13 @@ window.addEventListener('load', () => {
 		totalStat.textContent = todos.length;
 		completedStat.textContent = completedTodosArray.length;
 		remainingStat.textContent = todos.length - completedTodosArray.length;
+		const todoListDiv = document.querySelector('section.todo-list');
+
+		if (todos.length <= 0) {
+			todoListDiv.classList.add('hidden');
+		} else {
+			todoListDiv.classList.remove('hidden');
+		}
 	}
 
 	//Filtering todos, first we bring out the buttons for filtering the todos.
