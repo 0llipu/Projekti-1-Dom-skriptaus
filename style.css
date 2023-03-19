@@ -6,7 +6,7 @@
 	--dark: #4f5d75;
 	--active: #ef8354;
 	--delete: #c10000;
-	--delete-bg: #ff000052;
+	--delete-bg: #ff000030;
 
 	--shadow: 0 1px 3px #001515;
 }
@@ -76,7 +76,6 @@ h {
 h2 {
 	font-size: 1.5rem;
 	margin-bottom: 1rem;
-	font-style: bold;
 }
 
 h3 {
@@ -143,7 +142,6 @@ input[type='checkbox'] {
 	height: 1rem;
 	border-radius: 100%;
 	border: 1px solid var(--dark);
-	box-shadow: var(--dark);
 }
 
 .doneBall::after {
@@ -153,7 +151,6 @@ input[type='checkbox'] {
 	width: 0px;
 	height: 0px;
 	background-color: var(--dark);
-	box-shadow: var(--dark);
 	border-radius: 100%;
 	transition: 0.2s ease-in-out;
 }
@@ -258,7 +255,9 @@ input:checked ~ .doneBall::after {
 
 .error {
 	background-color: var(--delete-bg) !important;
+	border-radius: 0.25rem;
 	transition: 0.2s ease-in-out;
+	padding: 0.25rem;
 }
 
 /* End of error styling */
@@ -271,9 +270,9 @@ input:checked ~ .doneBall::after {
 }
 
 .active {
-	background-color: var(--active);
-	color: var(--primary);
-	transition: 0.2s ease-in-out;
+	background-color: var(--active) !important;
+	color: var(--primary) !important;
+	transition: 0.2s ease-in-out !important;
 }
 
 .stats {
