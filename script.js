@@ -248,7 +248,7 @@ window.addEventListener('load', () => {
 		totalStat.textContent = todos.length;
 		completedStat.textContent = completedTodosArray.length;
 		remainingStat.textContent = todos.length - completedTodosArray.length;
-		const todoListDiv = document.querySelector('section.todo-list');
+		const todoListDiv = document.querySelector('h3.listHeader');
 
 		if (todos.length <= 0) {
 			todoListDiv.classList.add('hidden');
