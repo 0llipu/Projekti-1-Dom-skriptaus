@@ -33,7 +33,7 @@ button {
 /* Start of body, section and text styling */
 
 body {
-	min-width: 400px;
+	min-width: 300px;
 	background: var(--light);
 	color: var(--dark);
 }
