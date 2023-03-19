@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Todo List</title>
+		<title>To do List</title>
 		<!-- CSS Import -->
 		<link rel="stylesheet" href="style.css">
 		<!-- End of CSS Import -->
@@ -17,25 +17,26 @@
 	</head>
 	<body>
 		<header>
-			<h2>To-Do list page</h2>
+			<h2>To Do list page</h2>
 		</header>
 		<!-- Beginning of main section  -->
 		<main class="app">
 
 			<!-- Beginning of create a todo section -->
-			<div class="create-todo">
+			<section class="create-todo">
+				<h3>Create a To Do here</h3>
 				<!-- Start of form -->
 				<form id="new-todo-form">
 					<input type="text" placeholder="Insert task here..." name="content" id="content">
 					<input type="submit" value="Add task">
 				</form>
 				<!-- End of form -->
-			</div>
+			</section>
 			<!-- End of create a todo section -->
 
 			<!-- Beginning of todo list section -->
 			<section class="todo-list">
-				<h3>List of To-Dos</h3>
+				<h3>List of To Dos</h3>
 				<div id="todo-list" class="list"></div>
 			</section>
 			<!-- End of todo list section -->
