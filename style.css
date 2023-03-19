@@ -1,0 +1,349 @@
+/* Variables for colors*/
+:root {
+	--primary: #2d3142;
+	--light: #ffffff;
+	--grey: #bfc0c0;
+	--dark: #4f5d75;
+	--active: #ef8354;
+	--delete: #c10000;
+	--delete-bg: #ff000052;
+
+	--shadow: 0 1px 3px #001515;
+}
+/* End of Variables */
+
+/* Resets for universal default styling, makes it easier to do own styling*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+input:not([type='radio']):not([type='checkbox']),
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+/* End of Resets */
+
+/* Start of body, section and text styling */
+
+body {
+	min-width: 400px;
+	background: var(--light);
+	color: var(--dark);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--primary);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3rem;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	color: var(--grey);
+}
+
+header h2 {
+	margin-top: 1rem;
+	text-transform: uppercase;
+}
+
+section {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+h {
+	color: var(--dark);
+	padding: 1rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-style: bold;
+}
+
+h3 {
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+/* End of body, section and text styling */
+
+/* Start of the create todo form styling */
+
+.create-todo input[type='text'] {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	padding: 1rem;
+	color: var(--dark);
+	background-color: var(--light);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+}
+
+.create-todo .options label div {
+	color: var(--dark);
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.create-todo input[type='submit'] {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	padding: 1rem;
+	color: var(--light);
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--primary);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.create-todo input[type='submit']:hover {
+	opacity: 0.75;
+}
+
+/* End of the create todo form styling */
+
+/* Start of the todo items list styling */
+
+/* First the styling of the checkbox button & label it's in */
+
+input[type='radio'],
+input[type='checkbox'] {
+	display: none;
+}
+
+.doneBall {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	border: 1px solid var(--dark);
+	box-shadow: var(--dark);
+}
+
+.doneBall::after {
+	content: '';
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--dark);
+	box-shadow: var(--dark);
+	border-radius: 100%;
+	transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .doneBall::after {
+	width: 0.75rem;
+	height: 0.75rem;
+	opacity: 1;
+	clip-path: polygon(13% 50%, 34% 66%, 81% 2%, 100% 18%, 39% 100%, 0 71%);
+}
+
+.todo-item label {
+	display: block;
+	margin: 0.5rem;
+	cursor: pointer;
+}
+
+/* End of the checkbox button & label styling */
+
+/* Next the styling for the list & item input area */
+
+.todo-list .list {
+	margin-bottom: 1rem;
+}
+
+.todo-list .todo-item {
+	display: flex;
+	align-items: center;
+	background-color: var(--light);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+}
+
+.todo-item .todo-content {
+	flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+	color: var(--dark);
+	width: 100%;
+	font-size: 0.75rem;
+}
+.todo-item .todo-content input:hover {
+	color: var(--active);
+	font-size: 0.8rem;
+	cursor: text;
+}
+
+/* End of the list and item input styling */
+
+/* Start of the action buttons styling for the list items */
+
+.todo-item .actions {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem;
+}
+
+.todo-item .actions button {
+	display: block;
+	padding: 0.33rem;
+	border-radius: 0.25rem;
+	color: var(--light);
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	font-size: 0.7rem;
+}
+
+.todo-item .actions button:hover {
+	opacity: 0.75;
+	background-color: var(--grey);
+}
+
+.todo-item .actions .edit {
+	margin-right: 0.5rem;
+	background-color: var(--primary);
+}
+
+.todo-item .actions .delete {
+	background-color: var(--delete);
+}
+
+.todo-item.done .todo-content input {
+	text-decoration: line-through;
+	color: var(--grey);
+}
+
+/* End of the action buttons styling for the list items */
+
+/* Start of the unsaved item styling */
+
+.unsaved-btn {
+	background-color: var(--active) !important;
+}
+.unsaved-text {
+	color: var(--active) !important;
+}
+/* End of the unsaved item styling */
+
+/* Start of the styling an field or item gets when it's tried to input as invalid */
+
+.error {
+	background-color: var(--delete-bg) !important;
+	transition: 0.2s ease-in-out;
+}
+
+/* End of error styling */
+/* End of the todo items list styling */
+
+/* Start of the stats & filter section, list & buttons styling */
+
+.hidden {
+	display: none !important;
+}
+
+.active {
+	background-color: var(--active);
+	color: var(--primary);
+	transition: 0.2s ease-in-out;
+}
+
+.stats {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 1rem;
+	margin: 0.5rem;
+}
+
+.filterBtn {
+	background-color: var(--dark);
+	color: var(--grey);
+	border-radius: 0.33rem;
+	box-shadow: var(--shadow);
+	padding: 0.5rem;
+	font-size: 0.7rem;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+.filterBtn:hover {
+	color: var(--active);
+	background-color: var(--light);
+	opacity: 0.8;
+}
+.filterBtn:active {
+	opacity: 0.6;
+}
+
+/* End of the stats & filter section */
+
+/* Start of footer styling */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--primary);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 5rem;
+	font-size: 0.75rem;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	color: var(--grey);
+}
+
+/* End of footer styling */
+
+/*Responsiveness*/
+
+@media only screen and (max-width: 768px) {
+	section {
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 769px) {
+	section {
+		width: 85%;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	section {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	section {
+		width: 50%;
+	}
+}

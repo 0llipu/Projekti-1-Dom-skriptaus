@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todo List</title>
+		<!-- CSS Import -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- End of CSS Import -->
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+		<!-- End of Fonts -->
+	</head>
+	<body>
+		<header>
+			<h2>To-Do list page</h2>
+		</header>
+		<!-- Beginning of main section  -->
+		<main class="app">
+
+			<!-- Beginning of create a todo section -->
+			<section class="create-todo">
+				<!-- Start of form -->
+				<form id="new-todo-form">
+					<input type="text" placeholder="Insert task here..." name="content" id="content" />
+					<input type="submit" value="Add task" />
+				</form>
+				<!-- End of form -->
+			</section>
+			<!-- End of create a todo section -->
+
+			<!-- Beginning of todo list section -->
+			<section class="todo-list">
+				<h3>List of To-Dos</h3>
+				<div id="todo-list" class="list"></div>
+			</section>
+			<!-- End of todo list section -->
+		</main>
+		<!-- End of main section -->
+
+		<!-- Footer starts here -->
+
+		<footer>
+			<!-- Start of stats -->
+			<p>Number of tasks</p>
+			<div class="stats" id="stats">
+				<button type="button" id="showAll" class="filterBtn"><span>Total </span><span
+						id="totalStat">0</span></button>
+				<button type="button" id="showCompleted" class="filterBtn"><span>Completed </span><span
+						id="completedStat">0</span></button>
+				<button type="button" id="showRemaining" class="filterBtn"><span>Remaining </span><span
+						id="remainingStat">0</span></button>
+			</div>
+			<!-- End of stats -->
+		</footer>
+		<!-- Footer ends here -->
+
+		<!-- Javascript link-->
+		<script src="script.js"></script>
+		<!-- End of link -->
+	</body>
+</html>
