@@ -8,7 +8,7 @@ Tämän lisäksi on pakko nostaa ylös, että AP:n kanssa käydyt lyhyet keskust
 
 Linkki videoon on tehtäväpalautuksessa.
 
-Tässä linkki verkkosivustolle: https://o-p.netlify.app/
+Tässä linkki verkkosivustolle: https://op-todoapp.netlify.app/
 
 Tässä alla listaus lähteistä:
 
